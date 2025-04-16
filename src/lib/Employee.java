@@ -60,7 +60,16 @@ public void setMonthlySalary(int grade) {
 	}
 	this.monthlySalary = baseSalary;
 }
-	
+
+private int calculateBaseSalaryByGrade(int grade) {
+	switch (grade) {
+		case 1: return 3000000;
+		case 2: return 5000000;
+		case 3: return 7000000;
+		default: return 0;
+	}
+}
+
 	public void setAnnualDeductible(int deductible) {	
 		this.annualDeductible = deductible;
 	}
@@ -70,9 +79,9 @@ public void setMonthlySalary(int grade) {
 	}
 	
 	public void setSpouse(String spouseName, String spouseIdNumber) {
-		this.spouseName = spouseName;
-		this.spouseIdNumber = idNumber;
-	}
+	this.spouseName = spouseName;
+	this.spouseIdNumber = spouseIdNumber; // diperbaiki dari sebelumnya idNumber
+}
 	
 	public void addChild(String childName, String childIdNumber) {
 		childNames.add(childName);
